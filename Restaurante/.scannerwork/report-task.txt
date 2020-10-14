@@ -1,0 +1,7 @@
+organization=gary-joan
+projectKey=Gary-Joan_Practica5_sa
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.11982
+dashboardUrl=https://sonarcloud.io/dashboard?id=Gary-Joan_Practica5_sa
+ceTaskId=AXSNtASWCbMRn0WSiWNe
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXSNtASWCbMRn0WSiWNe

@@ -1,0 +1,23 @@
+{
+  "name": "esb",
+  "version": "1.1.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node app.js"
+  },
+  "author": "Gary",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "gulp-zip": "^5.0.2"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "jest": "^26.4.2",
+    "supertest": "^4.0.2"
+  }
+}

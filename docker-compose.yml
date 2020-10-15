@@ -1,0 +1,7 @@
+version: '3'
+services:
+  esb:
+    container_name: "esb"
+    build: './ESB'
+    ports:
+        - "${PORT_ESB}:${PORT_ESB}"

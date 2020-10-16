@@ -28,7 +28,7 @@ app.post("/submit", function (request, response) {
     console.log(
       "Pedido de cliente " + request.body.cliente + " ingresado a Restaurante."
     );
-    llamar("http://localhost:3010/submit", listaMensajes.shift());
+    llamar("http://restaurante:3010/submit", listaMensajes.shift());
   } else if (
     request.body.origen == "Restaurante" &&
     request.body.destino == "Cliente"
@@ -49,7 +49,7 @@ app.post("/submit", function (request, response) {
     console.log(
       "Pedido de cliente " + request.body.cliente + " enviado a Repartidor"
     );
-    llamar("http://localhost:3005/submit", listaMensajes.shift());
+    llamar("http://repartidor:3005/submit", listaMensajes.shift());
   }
   else if (
     request.body.destino == "Cliente" &&

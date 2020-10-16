@@ -37,7 +37,7 @@ app.get("/VerPedido", function (req, res) {
 app.post("/Entregado", (req, res) => {
   listapedido[0].destino='Cliente';
   listapedido[0].origen='Repartidor';
-  llamar("http://localhost:3020/submit", listapedido.shift());
+  llamar("http://esb:3020/submit", listapedido.shift());
   res.end();
 });
 /* Funcion para hacer los post segun la url mandada. */

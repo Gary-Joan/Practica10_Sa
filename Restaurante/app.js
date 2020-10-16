@@ -22,7 +22,7 @@ app.post("/submit", function (request, response) {
     listaPedidos.push(request.body);
     listaPedidos[0].origen = "Restaurante";
     listaPedidos[0].destino = "Cliente";
-    llamar("http://localhost:3020/submit", listaPedidos[0]);
+    llamar("http://esb:3020/submit", listaPedidos[0]);
   } else {
     console.log("error!!");
   }
@@ -53,7 +53,7 @@ app.post("/EnviarPedidos", function (request, response) {
     listaPedidosRepartidor.push(menu);
     listaPedidosRepartidor[0].origen = "Restaurante";
     listaPedidosRepartidor[0].destino = "Repartidor";
-    llamar("http://localhost:3020/submit", listaPedidosRepartidor[0]);
+    llamar("http://esb:3020/submit", listaPedidosRepartidor[0]);
     listaPedidosRepartidor.shift();
     response.redirect("/");
     response.end();

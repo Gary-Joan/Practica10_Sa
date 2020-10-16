@@ -5,14 +5,14 @@ services:
     build: './ESB'
     ports:
         - "${PORT_ESB}:${PORT_ESB}"
-  restuarante:
+  restaurante:
     container_name: "restaurante"
     build: './Restaurante'
     ports:
         - "${PORT_RESTAURANTE}:${PORT_RESTAURANTE}"
   repatidor:
     container_name: "repartidor"
-    build: './Repatidor'
+    build: './Repartidor'
     ports:
         - "${PORT_REPARTIDOR}:${PORT_REPARTIDOR}"
   cliente:

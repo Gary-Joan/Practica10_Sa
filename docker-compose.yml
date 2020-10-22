@@ -1,22 +1,39 @@
 version: '3'
 services:
+  proxy:
+    image: nginx:latest
+    ports:
+        - 80:80
+    restart: always
+    volumes:
+        - ./nginx.conf:/etc/nginx/nginx.conf
   esb:
     container_name: "esb"
     build: './ESB'
     ports:
         - "${PORT_ESB}:${PORT_ESB}"
+    expose: 
+        - "${PORT_ESB}"
   restaurante:
     container_name: "restaurante"
     build: './Restaurante'
     ports:
         - "${PORT_RESTAURANTE}:${PORT_RESTAURANTE}"
+    expose: 
+        - "${PORT_RESTAURANTE}"
   repatidor:
     container_name: "repartidor"
     build: './Repartidor'
     ports:
         - "${PORT_REPARTIDOR}:${PORT_REPARTIDOR}"
+    expose: 
+        - "${PORT_REPARTIDOR}"
   cliente:
     container_name: "cliente"
     build: .
     ports:
         - "${PORT_CLIENTE}:${PORT_CLIENTE}"
+    expose: 
+        - "${PORT_CLIENTE}"
+volumes:
+  nginx-conf:

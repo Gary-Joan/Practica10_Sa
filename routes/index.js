@@ -17,7 +17,7 @@ router.post("/submit", (req, res) => {
                      origen:'Cliente',
                      destino:'Restaurante',
                     estado:'Enviado a Restaurante' };
-  llamar("http://esb:3020/submit", JSON.stringify(pedido));//metodo para mandar los datos al ESB
+  llamar("http://localhost:3020/submit", JSON.stringify(pedido));//metodo para mandar los datos al ESB
   menu = req.body.menu;
   res.redirect("/");
   
@@ -27,7 +27,7 @@ router.post("/submit", (req, res) => {
 //Con esta ruta verificamos siempre el estado pidiendo la informacion a ESB
 router.get("/Estado", async (req, res, next) => {
   let res1 = await axios
-    .get("http://esb:3020/Estado")
+    .get("http://localhost:3020/Estado")
     .catch(function (error) {
       console.log(error);
     });
